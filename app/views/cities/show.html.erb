@@ -1,0 +1,28 @@
+<div data-role="page" data-add-back-btn="true">
+  
+      <div data-role="header"  data-theme="b" data-position="inline"  >
+          <h1>Impreza.mobi</h1>
+          <a href="/cities/" data-icon="arrow-l" class="ui-btn-left" data-ajax="true">Back</a>
+      </div>
+
+      <div data-role="content" data-theme="b" >
+          <ul data-role="listview" data-theme="c">
+                  <% @city.clubs.each_with_index do |club, idx| %>
+                        <li>
+                            <div style="display: inline">
+                                <p><%=h club.name %></p>
+                                <p><%=h club.events[0].name%></p>
+                            </div>
+                            <div>
+                                <%= render :partial => "voices_number", :locals => {:club => club, :city => @city} %>
+                            </div>
+                        </li>
+                  <% end %>
+            </ul>
+      </div>
+
+      <div data-role="footer" data-theme="b">
+        <h1>Copyrights &copy; JCode</h1>
+      </div>
+
+</div>

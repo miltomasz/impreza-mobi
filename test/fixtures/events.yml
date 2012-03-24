@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  date: 2011-03-01 00:19:49
+  voices_number: 1
+  club_id: 1
+
+two:
+  name: MyString
+  date: 2011-03-01 00:19:49
+  voices_number: 1
+  club_id: 1

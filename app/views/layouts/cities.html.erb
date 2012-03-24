@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html class="ui-mobile landscape min-width-320px min-width-480px min-width-768px min-width-1024px">
+  <head>
+    <title>Cities: <%= controller.action_name %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <%= stylesheet_link_tag 'scaffold' %>
+    <%= stylesheet_link_tag 'layout' %>
+    <%= stylesheet_link_tag 'jquery.mobile-1.0b1' %>
+    <%= javascript_include_tag :defaults, "jquery", :cache => true %>
+    <%= javascript_include_tag :defaults, "jquery.raty", :cache => true %>
+    <%= javascript_include_tag :defaults, "jquery.mobile-1.0b1", :cache => true %>
+
+    <script type="text/javascript" >
+      function load(i, clubId) {
+       
+         jQuery("#voices_number" + i).load("/clubs/" + clubId + "/event/yes");
+         console.log("Inside" + i);
+
+         <%#*$("#voices_number" + i).page();%>
+
+           <%#*jQuery.ajax({%>
+              <%#*url: "/clubs/" + clubId + "/event/yes",%>
+              <%#*cache: false,%>
+              <%#*dataType: "html",%>
+              <%#*success: function(data) {%>
+                  <%#*jQuery("#voices_number" + i).html(data);%>
+                  <%#*console.log("Inside" + data);%>
+              <%#*}%>
+          <%#*});%>
+      }
+      
+      <%#*jQuery(document).ready(function() {%>
+        <%#*jQuery('table .item').each(function(i) {%>
+          <%#*jQuery('#raty'+i).raty({%>
+            <%#*start: jQuery("#voices"+i).val(),%>
+            <%#*half: false,%>
+
+            <%#*click: function(score, event) {%>
+              <%#*var cityId = jQuery("#city"+i).val();%>
+              <%#*var clubId = jQuery("#club"+i).val();%>
+
+              <%#*console.log(cityId + " | " + clubId);%>
+                    
+              <%#*jQuery("#voices_number" + i).load("/cities/" + cityId + "/club/" + clubId + "/event/" + i + "/calculate/" + score, function() {%>
+                <%#*var eventId = jQuery("#event"+i).val();%>
+                <%#*var a = jQuery("#last_voices_index"+clubId+"-event"+eventId).val();%>
+                <%#*var b = jQuery("#last_voices_number"+clubId+"-event"+eventId).val();%>
+                <%#*console.log("----- a: " + a);%>
+                <%#*console.log("----- b: " + b);%>
+                <%#*var result = Math.round(b / a);%>
+                <%#*console.log("----- b/a: " + result);%>
+
+                <%#*var display = 0;%>
+                <%#*var src = "/images/star-off.png";%>
+
+                <%#*if(result >= 5) {%>
+                  <%#*src = "/images/star-on.png";%>
+                  <%#*display = 1;%>
+                <%#*}%>
+                <%#*jQuery("#raty"+i+"-1").attr("src", src);%>
+
+                <%#*src = "/images/star-off.png";%>
+                <%#*if(result >= 10) {%>
+                  <%#*src = "/images/star-on.png";%>
+                  <%#*display = 2;%>
+                <%#*}%>
+                <%#*jQuery("#raty"+i+"-2").attr("src", src);%>
+
+                <%#*src = "/images/star-off.png";%>
+                <%#*if(result >= 15) {%>
+                  <%#*src = "/images/star-on.png";%>
+                  <%#*display = 3;%>
+                <%#*}%>
+                <%#*jQuery("#raty"+i+"-3").attr("src", src);%>
+
+                <%#*src = "/images/star-off.png";%>
+                <%#*if(result >= 20) {%>
+                  <%#*src = "/images/star-on.png";%>
+                  <%#*display = 4;%>
+                <%#*}%>
+                <%#*jQuery("#raty"+i+"-4").attr("src", src);%>
+
+                <%#*src = "/images/star-off.png";%>
+                <%#*if(result >= 25) {%>
+                  <%#*src = "/images/star-on.png";%>
+                  <%#*display = 5;%>
+                <%#*}%>
+                <%#*jQuery("#raty"+i+"-5").attr("src", src);%>
+                        
+                <%#*jQuery("#raty"+i+"-score").attr("value", display);%>
+              <%#*});%>
+
+            <%#*}%>
+          <%#*});%>
+        <%#*});%>
+      <%#*});%>
+
+
+        
+    </script>
+  </head>
+  <body style="overflow: hidden">
+
+    <%= yield %>
+
+  </body>
+</html>

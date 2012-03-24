@@ -1,0 +1,21 @@
+<div data-role="page" data-add-back-btn="false">
+      <div data-role="header"  data-theme="b" >
+          <h1>Impreza.mobi</h1>
+      </div>
+
+      <div data-role="content" data-theme="b" >
+        <ul data-role="listview"  data-theme="c">
+              <% @cities.each do |city| %>
+                  <li><%= link_to city.name, city %></li>
+              <% end %>
+        </ul>
+      </div>
+
+      <div data-role="footer" data-theme="b">
+        <h1>Copyrights &copy; JCode</h1>
+      </div>
+</div>
+
+
+
+

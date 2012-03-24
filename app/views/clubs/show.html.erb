@@ -1,0 +1,70 @@
+<div data-role="page" data-add-back-btn="true" id="vote">
+      <div data-role="header"  data-theme="b" >
+          <h1>Impreza.mobi</h1>
+      </div>
+
+      <div data-role="content" data-theme="b" >
+                      Do you like tonight's party ?
+            <form action="/clubs/<%= @club.id%>/event/<%= @club.events[0].id %>/calculate" method="post">
+                  <div data-role="fieldcontain">
+                          <fieldset data-role="controlgroup">
+                                    <input type="radio" name="radio" id="radio-choice-1" value="-1"  />
+                                    <label for="radio-choice-1">No!</label>
+
+                                    <input type="radio" name="radio" id="radio-choice-2" value="0"  checked="checked"/>
+                                    <label for="radio-choice-2">More less</label>
+
+                                    <input type="radio" name="radio" id="radio-choice-3" value="1"  />
+                                    <label for="radio-choice-3">Yes!</label>
+                        </fieldset>
+                        <fieldset data-role="controlgroup">
+                                    <input type="submit" value="Vote"  />
+                        </fieldset>
+                  </div>
+            </form>
+      </div>
+
+      <div data-role="footer" data-theme="b">
+         <div data-role="navbar">
+		<ul>
+			<li><a href="/clubs/show/<%= @club.id %> " class="ui-btn-active" data-transition="none">Vote</a></li>
+			<li><a href="b.html">Comments</a></li>
+			<li><a href="b.html">Info</a></li>
+		</ul>
+	</div><!-- /navbar -->
+        <h1>Copyrights &copy; JCode</h1>
+      </div>
+</div>
+
+<div data-role="page" data-add-back-btn="true" id="comments">
+      <div data-role="header"  data-theme="b" >
+          <h1>Impreza.mobi</h1>
+      </div>
+
+      <div data-role="content" data-theme="b" >
+        <ul data-role="listview"  data-theme="c">
+            <li>
+                <p>
+                  <b>Name:</b>
+                  <%=h @club.name %>
+                </p>
+                <p>
+                  <b>Address:</b>
+                  <%=h @club.address %>
+                </p>
+            </li>
+        </ul>
+      </div>
+
+      <div data-role="footer" data-theme="b">
+         <div data-role="navbar">
+		<ul>
+			<li><a href="/clubs/show/19" class="ui-btn-active">Vote</a></li>
+			<li><a href="b.html">Comments</a></li>
+			<li><a href="b.html">Info</a></li>
+		</ul>
+	</div><!-- /navbar -->
+        <h1>Copyrights &copy; JCode</h1>
+      </div>
+</div>
+

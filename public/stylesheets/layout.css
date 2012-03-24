@@ -1,0 +1,60 @@
+#header {
+    width: 100%;
+    height: 30px;
+    background-color: lightsteelblue;
+    color: white;
+}
+
+#footer {
+    width: 100%;
+    height: 10px;
+    background-color: black;
+    color: white;
+}
+
+#header p {
+   font-size: 20px;
+}
+
+#footer p {
+   font-size: 10px;
+   line-height: 10px;
+   text-align: center;
+   vertical-align: middle;
+}
+
+/* city page */
+#club_row { width: 100%; background-color: whitesmoke;}
+#city_name { font-size: 25px; font-weight: bold}
+#date_s {font-size: 15px; margin-left: 90%}
+#time_s {font-size: 20px;}
+#city_header {margin-bottom: 5px; margin-top: 5px;}
+
+.club_img {position: relative; width: 40px; height: 40px; border-style: solid; border-width: 1px; margin-right: 5px}
+.club_info1 {margin-left: 5px; margin-top: 5px; float: left}
+
+.voices_box {float: left; font-size: 10px}
+.club_name_box {font-weight: bold}
+.club_event_name_box {font-size: 10px;}
+.club_link {float: left}
+
+td {
+    height: 80px;
+    max-height: 135px;
+    min-height: 80px;
+    width: 100%;
+}
+td .main_tr {background-color: lightgoldenrodyellow; height: inherit}
+#date_s {
+    font-size: 15px;
+    position: relative;
+    top: 3px;
+    margin-left: 20px;
+}
+
+.round_corners {
+ -webkit-border-radius: 10px; /* Safari, Chrome */
+ -khtml-border-radius: 10px;    /* Konqueror */
+ -moz-border-radius: 10px; /* Firefox */
+ border-radius: 10px;
+}

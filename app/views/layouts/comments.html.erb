@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html class="ui-mobile landscape min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Comments: <%= controller.action_name %></title>
+    <%= stylesheet_link_tag 'scaffold' %>
+    <%= stylesheet_link_tag 'layout' %>
+    <%= stylesheet_link_tag 'jquery.mobile-1.0b1' %>
+    <%= javascript_include_tag :defaults, "jquery", :cache => true %>
+    <%= javascript_include_tag :defaults, "jquery.raty", :cache => true %>
+    <%= javascript_include_tag :defaults, "jquery.mobile-1.0b1", :cache => true %>
+</head>
+ <body style="overflow: hidden">
+    <%= yield %>
+ </body>
+</html>

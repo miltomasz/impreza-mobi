@@ -1,0 +1,7 @@
+<p style="font-size: 10px;">
+  <a href="/cities/<%= city.id  %>/club/<%= club.id  %>/yes" data-ajax="false" ><img src="/images/yes.gif" /></a>
+  + <%= club.events[0].yes %>
+  <a href="/cities/<%= city.id  %>/club/<%= club.id  %>/no" data-ajax="false" ><img src="/images/no.gif" /></a>
+  - <%= club.events[0].no %>
+  <a href="/comments/event/<%= club.events[0].id %>" data-ajax="true" ><img src="/images/comm.png" /></a>
+</p>

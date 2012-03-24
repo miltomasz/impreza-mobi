@@ -1,0 +1,54 @@
+<div data-role="page" data-add-back-btn="false">
+      <div data-role="header"  data-theme="b" >
+          <h1>Impreza.mobi</h1>
+          <a href="/cities/<%= @event.club.city.id%> " data-icon="arrow-l" class="ui-btn-left" data-ajax="true">Back</a>
+      </div>
+
+      <div data-role="content" data-theme="b" >
+          <div data-role="collapsible" data-collapsed="true">
+            <h3>Add comment</h3>
+              <%# form_for(@comment) do |f| %>
+                <%#= f.error_messages %>
+                  <form action="/comments/create" class="new_comment" id="new_comment" method="post" data-ajax="true">
+                      <div data-role="fieldcontain">
+                          <%#= f.label :name %>
+                          <%#= f.text_field :name %>
+                          <label for="comment_name">Name</label>
+                          <input id="comment_name" name="comment[name]" size="30" type="text" />
+                      </div>
+                      <div data-role="fieldcontain">
+                           <%#= f.label :content %>
+                           <%#= f.text_area :content, :rows => 2%>
+                        <label for="comment_content">Content</label>
+                           <textarea cols="40" id="comment_content" name="comment[content]" rows="2"></textarea>
+                      </div>
+                       <%#= f.submit 'Create' %>
+                       <input id="comment_event_id" name="comment_event_id" type="hidden" value="<%= @event.id %>" />
+                       <input id="comment_submit" name="commit" type="submit" value="Create" />
+                    <%# end %>
+                  </form>
+	  </div>
+        <ul data-role="listview"  data-theme="c" style="margin-top: 10px;">
+                <% @comments.each do |comment| %>
+                    <li>
+                          <p>
+                            <b>Name:</b>
+                            <%=h comment.name %>
+                          </p>
+                          <p>
+                            <b>Entry date:</b>
+                            <%=h comment.entry_date %>
+                          </p>
+                          <p>
+                            <b>Content:</b>
+                            <%=h comment.content %>
+                          </p>
+                      </li>
+                <% end %>
+          </ul>
+      </div>
+
+      <div data-role="footer" data-theme="b">
+        <h1>Copyrights &copy; JCode</h1>
+      </div>
+</div>

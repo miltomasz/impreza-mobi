@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @event.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @event.date %>
+</p>
+
+<p>
+  <b>Voices number:</b>
+  <%=h @event.voices_number %>
+</p>
+
+<p>
+  <b>Club:</b>
+  <%=h @event.club_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
